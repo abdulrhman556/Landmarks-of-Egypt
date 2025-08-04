@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pharaoh's Ancient Quest</title>
+<link rel="stylesheet" href="../../CSS/stories.css">
+
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div id="start" class="screen active" style="background: black;">
+    <h1>Are you ready for an unforgettable Pharaoh’s journey?</h1>
+    <button class="btn" onclick="nextScene('chapter1')">Start the Adventure</button>
+    <button class="btn" onclick="goHome()">Back to Home</button>
+  </div>
+
+  <!-- Chapters -->
+  <div id="chapter1" class="screen" style="background: url('../../Image/11.jpg') no-repeat center/cover;">
+    <h1>Chapter One: The Mysterious Temple</h1>
+    <p>You step into an ancient temple, its grand entrance lined with towering pillars carved with forgotten hieroglyphs. In front of you, two shadowy paths emerge from the darkness. Which way will you choose?</p>
+    <button class="btn" onclick="nextScene('chapter2a')">Take the Left Path</button>
+    <button class="btn" onclick="nextScene('chapter2b')">Take the Right Path</button>
+  </div>
+
+  <div id="chapter2a" class="screen" style="background: url('../../Image/22.jpg') no-repeat center/cover;">
+    <h1>Chapter Two: Whispering Statues</h1>
+    <p>The statues lining the corridor begin to whisper ancient secrets in a language almost forgotten. Their voices swirl around you like a phantom breeze. Will you listen and risk being bewitched, or will you move forward ignoring them?</p>
+    <button class="btn" onclick="nextScene('chapter3a')">Listen Carefully</button>
+    <button class="btn" onclick="nextScene('chapter3b')">Ignore and Move On</button>
+  </div>
+
+  <div id="chapter2b" class="screen" style="background: url('../../Image/23.jpg') no-repeat center/cover;">
+    <h1>Chapter Two: The Hidden Chamber</h1>
+    <p>Behind a cracked wall, you find a hidden room shimmering with golden light. Ancient treasures and mysterious artifacts are scattered everywhere, tempting you to explore deeper into the unknown mysteries of the temple.</p>
+    <button class="btn" onclick="nextScene('chapter3c')">Enter the Room</button>
+    <button class="btn" onclick="nextScene('chapter3a')">Stay Outside</button>
+  </div>
+
+  <div id="chapter3a" class="screen" style="background: url('../../Image/24.jpg') no-repeat center/cover;">
+    <h1>Chapter Three: The Ancient Guardian</h1>
+    <p>A towering guardian, clad in golden armor and radiating a powerful aura, blocks your path. His eyes seem to peer into your soul. Will you draw your weapon and fight, or attempt to negotiate with this formidable protector?</p>
+    <button class="btn" onclick="nextScene('chapter4a')">Fight Him</button>
+    <button class="btn" onclick="nextScene('chapter4b')">Negotiate</button>
+  </div>
+
+  <div id="chapter3b" class="screen" style="background: url('../../Image/25.jpg') no-repeat center/cover;">
+    <h1>Chapter Three: The Cursed Treasure</h1>
+    <p>Hidden deep within a dark alcove, you find a treasure chest. But beware — the surrounding air feels heavy with a dark curse. Legends say whoever dares to claim it may never return. Will you take the risk?</p>
+    <button class="btn" onclick="nextScene('chapter4c')">Take It</button>
+    <button class="btn" onclick="nextScene('chapter4a')">Leave It</button>
+  </div>
+
+  <div id="chapter3c" class="screen" style="background: url('../../Image/26.jpg') no-repeat center/cover;">
+    <h1>Chapter Three: Voices of the Kings</h1>
+    <p>Echoes of ancient Pharaohs fill the chamber, chanting in a long-lost dialect. The very walls seem alive with history. Will you heed their call, hoping for wisdom, or dismiss their echoes and continue onward?</p>
+    <button class="btn" onclick="nextScene('chapter4b')">Listen Closely</button>
+    <button class="btn" onclick="nextScene('chapter4c')">Ignore and Proceed</button>
+  </div>
+
+  <!-- Final Chapter -->
+  <div id="chapter4a" class="screen" style="background: url('../../Image/27.jpg') no-repeat center/cover;">
+    <h1>The Final Trial</h1>
+    <p>You have reached the final threshold. Here lies the moment where your true intentions will be judged. Are you a seeker of wisdom, a hunter of gold, or a lost soul searching for purpose in the sands of time?</p>
+    <button class="btn" onclick="nextScene('chapter5')">Reveal Your Fate</button>
+  </div>
+
+  <div id="chapter4b" class="screen" style="background: url('../../Image/28.jpg') no-repeat center/cover;">
+    <h1>The Forgotten Scroll</h1>
+    <p>In a dusty corner, you find a scroll bound with ancient silk. Its verses hold the power to change destiny itself. Will you dare to read it aloud, knowing your life may be altered forever by the words within?</p>
+    <button class="btn" onclick="nextScene('chapter5')">Read the Scroll</button>
+  </div>
+
+  <div id="chapter4c" class="screen" style="background: url('../../Image/29.jpg') no-repeat center/cover;">
+    <h1>The Curse Awakens</h1>
+    <p>Suddenly, the ground trembles and a deafening roar fills the temple. The ancient curse has been unleashed. With shadows chasing you, will you manage to escape the temple's grasp in time?</p>
+    <button class="btn" onclick="nextScene('chapter5')">Run Fast!</button>
+  </div>
+
+  <!-- Name Entry -->
+  <div id="chapter5" class="screen" style="background: url('../../Image/30.jpg') no-repeat center/cover;">
+    <h1>Enter Your Name to Receive Your Pharaoh Title</h1>
+    <input type="text" id="nameInput" class="input-name" placeholder="Type your name here" />
+    <button class="btn" onclick="showCongrats()">Complete the Journey</button>
+  </div>
+
+  <!-- Congratulations Screen -->
+  <div id="congrats" class="screen" style="background: rgb(7, 0, 0); color: rgb(248, 244, 244);">
+    <h1>Congratulations!</h1>
+    <p>You have become one of the greatest explorers of the ancient Pharaohs' era. Your name will be forever written among the stars of Egyptian legend!</p>
+    <div style="position: relative;">
+      <img id="congrats-img" src="../../Image/sh.jpg" alt="Congratulations Frame">
+      <div id="player-name"></div>
+    </div>
+    <button class="btn" onclick="downloadImage()">Download Image</button>
+    <button class="btn" onclick="restart()">Play Again</button>
+    <button class="btn" onclick="goHome()">Return to Home</button>
+  </div>
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="../../JS/stories.js"></script>
+  <script>
+    function restart() {
+     window.location.href = './stories3.html';
+   } 
+ </script>
+</body>
+</html>

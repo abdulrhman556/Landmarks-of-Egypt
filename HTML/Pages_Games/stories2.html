@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pharaoh's Wrath</title>
+  <link rel="stylesheet" href="../../CSS/stories.css">
+</head>
+<body>
+
+<div id="start" class="screen active" style="background: black;">
+  <h1>Are you ready to reveal the truth of the Tyrant Pharaoh?</h1>
+  <button class="btn" onclick="nextScene('chapter1')">Start</button>
+  <button class="btn" onclick="goHome()">Home</button>
+</div>
+
+<div id="chapter1" class="screen" style="background: url('../../Image/31.jpg') no-repeat center/cover;">
+  <h1>Chapter 1: The Desert Warning</h1>
+  <p>A cursed wind speaks of a forgotten king, buried deep beneath the desert sands, waiting to rise again. Two trails emerge from the scorching dunes, each whispering secrets of the past and promises of fate.</p>
+  <button class="btn" onclick="nextScene('chapter2a')">Follow the ancient symbols</button>
+  <button class="btn" onclick="nextScene('chapter2b')">Walk toward the broken statues</button>
+</div>
+
+<div id="chapter2a" class="screen" style="background: url('../../Image/32.jpg') no-repeat center/cover;">
+  <h1>Chapter 2A: The Truth Wall</h1>
+  <p>Hieroglyphs carved in stone speak of a tyrant who stole the throne, banished the true heir, and cursed the land with his greed. The wall asks: do you believe in what is revealed to you?</p>
+  <button class="btn" onclick="nextScene('chapter3a')">Yes</button>
+  <button class="btn" onclick="nextScene('chapter3b')">No</button>
+</div>
+
+<div id="chapter2b" class="screen" style="background: url('../../Image/33.jpg') no-repeat center/cover;">
+  <h1>Chapter 2B: Whispers of the People</h1>
+  <p>The spirits of fallen villagers rise from the sands, pleading for justice, telling tales of betrayal and forgotten truths, asking you to be their voice and avenge their suffering.</p>
+  <button class="btn" onclick="nextScene('chapter3c')">Help them</button>
+  <button class="btn" onclick="nextScene('chapter3a')">Ignore them</button>
+</div>
+
+<div id="chapter3a" class="screen" style="background: url('../../Image/34.jpg') no-repeat center/cover;">
+  <h1>Chapter 3: The Hidden Tomb</h1>
+  <p>Through secret passages and shifting sands, you discover the tomb of the forgotten prince, sealed for ages, its entrance whispering promises and warnings alike.</p>
+  <button class="btn" onclick="nextScene('chapter4a')">Open it</button>
+  <button class="btn" onclick="nextScene('chapter4b')">Leave it sealed</button>
+</div>
+
+<div id="chapter3b" class="screen" style="background: url('../../Image/35.jpg') no-repeat center/cover;">
+  <h1>Chapter 3: The Curse Awakens</h1>
+  <p>Your denial shakes the ancient stones, awakening a curse that darkens the sky. Winds howl, and the ground trembles with the fury of the forsaken.</p>
+  <button class="btn" onclick="nextScene('chapter4c')">Escape</button>
+  <button class="btn" onclick="nextScene('chapter4a')">Fight the curse</button>
+</div>
+
+<div id="chapter3c" class="screen" style="background: url('../../Image/36.jpg') no-repeat center/cover;">
+  <h1>Chapter 3: The Rebel Army</h1>
+  <p>Among the ruins, you meet rebels who have waited centuries. They hold the ancient knowledge and the power to end the tyrant’s legacy. Will you stand with them?</p>
+  <button class="btn" onclick="nextScene('chapter4b')">Join them</button>
+  <button class="btn" onclick="nextScene('chapter4c')">Report them</button>
+</div>
+
+<div id="chapter4a" class="screen" style="background: url('../../Image/37.jpg') no-repeat center/cover;">
+  <h1>Final Chapter: The Secret Chamber</h1>
+  <p>In the depths of the tomb, you uncover scrolls, confessions, and the royal seal—evidence of the king's cruel reign and a path to justice.</p>
+  <button class="btn" onclick="nextScene('chapter5')">Reveal to the world</button>
+</div>
+
+<div id="chapter4b" class="screen" style="background: url('../../Image/38.jpg') no-repeat center/cover;">
+  <h1>Final Chapter: Truth in the Scroll</h1>
+  <p>Within a golden case lies a scroll that tells of the rightful heir, hidden and protected, waiting to return and restore balance.</p>
+  <button class="btn" onclick="nextScene('chapter5')">Search for him</button>
+</div>
+
+<div id="chapter4c" class="screen" style="background: url('../../Image/39.jpg') no-repeat center/cover;">
+  <h1>Final Chapter: Trapped by Greed</h1>
+  <p>As you reach for forbidden treasure, the tomb crumbles. The walls shake, and you must choose quickly: escape or perish beneath your ambition.</p>
+  <button class="btn" onclick="nextScene('chapter5')">Take the leap of faith</button>
+</div>
+
+<div id="chapter5" class="screen" style="background: url('../../Image/40.jpg') no-repeat center/cover;">
+  <h1>Your name shall be remembered in history</h1>
+  <input type="text" id="nameInput" class="input-name" placeholder="Enter your name" />
+  <button class="btn" onclick="showCongrats()">Finish</button>
+</div>
+
+<div id="congrats" class="screen" style="background: rgb(7, 0, 0); color: rgb(248, 244, 244);">
+  <h1>The Kingdom is Free!</h1>
+  <p>You have brought justice and ended the Pharaoh's tyranny. The land sings your name in legends and stars shine brighter for your courage.</p>
+  <div style="position: relative;">
+    <img id="congrats-img" src="../../Image/41.jpg" alt="Congrats Frame">
+    <div id="player-name"></div>
+  </div>
+  <button class="btn" onclick="downloadImage()">Download</button>
+  <button class="btn" onclick="restart()">Replay</button>
+  <button class="btn" onclick="goHome()">Home</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="../../JS/stories.js"></script>
+<script>
+   function restart() {
+    window.location.href = './stories2.html';
+  } 
+</script>
+</body>
+</html>

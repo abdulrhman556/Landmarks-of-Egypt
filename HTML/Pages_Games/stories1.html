@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Pharaoh Story</title>
+  <link rel="stylesheet" href="../../CSS/stories.css">
+</head>
+<body>
+
+<!-- Start Screen -->
+<div id="start" class="screen active" style="background: black;">
+  <h1>Are you ready for the Pharaoh's Journey?</h1>
+  <button class="btn" onclick="nextScene('chapter1')">Continue</button>
+  <button class="btn" onclick="goHome()">Return to Home</button>
+</div>
+
+<!-- Chapter 1 -->
+<div id="chapter1" class="screen" style="background: url('../../Image/45.jpg') no-repeat center/cover;">
+  <h1>Chapter 1: The Pyramid Entrance</h1>
+  <p>You stand before a mysterious pyramid hidden beneath the sands for millennia. Two tunnels lie ahead, each whispering secrets of the past. Which path will you take to uncover the truth?</p>
+  <button class="btn" onclick="nextScene('chapter2a')">Enter the left tunnel</button>
+  <button class="btn" onclick="nextScene('chapter2b')">Enter the right tunnel</button>
+</div>
+
+<!-- Chapter 2A -->
+<div id="chapter2a" class="screen" style="background: url('../../Image/46.jpg') no-repeat center/cover;">
+  <h1>Chapter 2A: The Room of Hieroglyphs</h1>
+  <p>The walls are alive with ancient inscriptions glowing faintly. The symbols seem to rearrange themselves as if guiding you. Do you dare to uncover their meaning or continue forward in ignorance?</p>
+  <button class="btn" onclick="nextScene('chapter3a')">Yes, try to read</button>
+  <button class="btn" onclick="nextScene('chapter3b')">Ignore and keep walking</button>
+</div>
+
+<!-- Chapter 2B -->
+<div id="chapter2b" class="screen" style="background: url('../../Image/47.jpg') no-repeat center/cover;">
+  <h1>Chapter 2B: Sand Trap Passage</h1>
+  <p>The ground trembles beneath your feet as golden sand begins to rise, threatening to engulf the passage. A small door flickers at the edge of your sight. Your instincts scream for action.</p>
+  <button class="btn" onclick="nextScene('chapter3c')">Rush through the door</button>
+  <button class="btn" onclick="nextScene('chapter3a')">Try to jump back</button>
+</div>
+
+<!-- Chapter 3A -->
+<div id="chapter3a" class="screen" style="background: url('../../Image/48.jpg') no-repeat center/cover;">
+  <h1>Chapter 3: The Guardian Statue</h1>
+  <p>A towering stone figure awakens with a thunderous growl. Its eyes blaze like the sun. To pass, you must either face its test of wisdom—or challenge it in combat. What do you choose?</p>
+  <button class="btn" onclick="nextScene('chapter4a')">Solve the riddle</button>
+  <button class="btn" onclick="nextScene('chapter4b')">Fight the statue</button>
+</div>
+
+<!-- Chapter 3B -->
+<div id="chapter3b" class="screen" style="background: url('../../Image/49.jpg') no-repeat center/cover;">
+  <h1>Chapter 3: The False Treasure</h1>
+  <p>Gold gleams in the torchlight, piled neatly in the center of the chamber. It’s too perfect. A chill runs down your spine—could this be a trap from those who never returned?</p>
+  <button class="btn" onclick="nextScene('chapter4c')">Take it anyway</button>
+  <button class="btn" onclick="nextScene('chapter4a')">Leave it and continue</button>
+</div>
+
+<!-- Chapter 3C -->
+<div id="chapter3c" class="screen" style="background: url('../../Image/50.jpg') no-repeat center/cover;">
+  <h1>Chapter 3: Chamber of Echoes</h1>
+  <p>Ancient chants swirl around you, echoing from unseen walls. Words you don't understand yet feel deep in your soul. Will you stay and listen, or escape before it's too late?</p>
+  <button class="btn" onclick="nextScene('chapter4b')">Stay and listen</button>
+  <button class="btn" onclick="nextScene('chapter4c')">Run out</button>
+</div>
+
+<!-- Chapter 4A -->
+<div id="chapter4a" class="screen" style="background: url('../../Image/51.jpg') no-repeat center/cover;">
+  <h1>The Final Door</h1>
+  <p>A massive stone door towers before you, covered in puzzles only the chosen one can solve. The final challenge awaits. Will you prove worthy?</p>
+  <button class="btn" onclick="nextScene('chapter5')">Unlock the door</button>
+</div>
+
+<!-- Chapter 4B -->
+<div id="chapter4b" class="screen" style="background: url('../../Image/52.jpg') no-repeat center/cover;">
+  <h1>The King’s Chamber</h1>
+  <p>You enter a vast hall filled with relics of royalty. A sarcophagus rests in the center, untouched by time. You feel the presence of a king watching.</p>
+  <button class="btn" onclick="nextScene('chapter5')">Enter the chamber</button>
+</div>
+
+<!-- Chapter 4C -->
+<div id="chapter4c" class="screen" style="background: url('../../Image/53.jpg') no-repeat center/cover;">
+  <h1>The Trap Awakens</h1>
+  <p>The room shakes violently. Hidden walls begin to close in, the air tightens. Only seconds remain before you’re trapped forever. Act quickly!</p>
+  <button class="btn" onclick="nextScene('chapter5')">Escape now!</button>
+</div>
+
+<!-- Chapter 5 -->
+<div id="chapter5" class="screen" style="background: url('../../Image/54.jpg') no-repeat center/cover;">
+  <h2>Enter your name to receive your title</h2>
+  <input type="text" id="nameInput" class="input-name" placeholder="Enter your name" />
+  <button class="btn" onclick="showCongrats()">Finish</button>
+</div>
+
+<!-- Congratulations Screen -->
+<div id="congrats" class="screen" style="background: rgb(7, 0, 0); color: rgb(248, 244, 244);">
+  <h2>Congratulations!</h2>
+  <p>You have become the Greatest Explorer of the Ancient World!</p>
+  <div style="position: relative;">
+    <img id="congrats-img" src="../../Image/50.png" alt="Congrats Frame">
+    <div id="player-name"></div>
+  </div>
+  <button class="btn" onclick="downloadImage()">Download</button>
+  <button class="btn" onclick="restart()">Replay</button>
+  <button class="btn" onclick="goHome()">Home</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script src="../../JS/stories.js"></script>
+<script>
+    function restart() {
+     window.location.href = './stories1.html';
+   } 
+ </script>
+</body>
+</html>

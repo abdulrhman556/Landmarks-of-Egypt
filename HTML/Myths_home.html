@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myths</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/styel.css">
+
+</head>
+<body>
+
+    <div class="Myths-background">
+        <div class="Myths-container">
+            <select id="story-type" class="form-select type-dropdown">
+                <option value="all">All Stories</option>
+                <option value="creation">Creation Myths</option>
+                <option value="gods">Myths of the Gods</option>
+                <option value="afterlife">Myths of the Afterlife</option>
+            </select>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-category="creation">
+                        <img src="../Image/my1.jpg" alt="Creation Myth">
+                        <h6>Osiris Lord-Afterlife</h6>
+                        <button class="story-btn" onclick="window.location.href='../HTML/Pages_Myths/page1.html'">Read More</button> 
+                    </div>
+                    <div class="swiper-slide" data-category="gods">
+                        <img src="../Image/my2.jpg" alt="Gods Myth">
+                        <h6>Isis Magic-Queen</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page2.html'">Read More</button>
+                    </div>
+                    <div class="swiper-slide" data-category="creation">
+                        <img src="../Image/my3.jpg" alt="Another Creation Myth">
+                        <h6>Anubis Death-Guardian</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page3.html'">Read More</button>
+                    </div>
+                    <div class="swiper-slide" data-category="afterlife">
+                        <img src="../Image/my4.jpg" alt="Another Creation Myth">
+                        <h6>Thoth Wisdom-Scribe</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page4.html'">Read More</button>
+                    </div>
+                    <div class="swiper-slide" data-category="gods">
+                        <img src="../Image/my5.jpg" alt="Another Creation Myth">
+                        <h6>Seth Chaos-God</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page5.html'">Read More</button>
+                    </div>
+                    <div class="swiper-slide" data-category="creation">
+                        <img src="../Image/my6.jpg" alt="Another Creation Myth">
+                        <h6>Bastet Cat-Goddess</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page6.html'">Read More</button>
+                    </div>
+                    <div class="swiper-slide" data-category="gods">
+                        <img src="../Image/my7.jpg" alt="Another Creation Myth">
+                        <h6>Hathor Love-Mother</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page7.html'">Read More</button>
+                    </div>
+                    <div class="swiper-slide" data-category="creation">
+                        <img src="../Image/my8.jpg" alt="Another Creation Myth">
+                        <h6>Amun Hidden-King</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page8.html'">Read More</button>
+                    </div>
+                    <div class="swiper-slide" data-category="afterlife">
+                        <img src="../Image/my9.jpg" alt="Another Creation Myth">
+                        <h6>Sekhmet War-Healer</h6>
+                        <button class="story-btn" onclick="location.href='../HTML/Pages_Myths/page9.html'">Read More</button>
+                    </div>
+                </div>
+        
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="../HTML/Nav.html" class="Myths-exit-link">
+        <i class='bx bxs-home'></i>
+    </a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="../JS/Myths.js"></script>
+    
+</body>
+</html>

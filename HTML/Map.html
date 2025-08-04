@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="../CSS/styel.css">
+    <title>Ancient Egypt Interactive Map</title>
+
+</head>
+<body id="map-body">
+
+    <!-- Start Map -->  
+    <div class="map-container">
+        <div class="map-text">
+        <h1 class="map-title">Map of <span>Archaeological</span> Sites in Egypt</h1>
+        <p>Explore the most important archaeological sites of ancient Egypt with this interactive map.</p>
+        
+        <div class="map-buttons">
+            <button onclick="highlightLocation('Pyramids')">Pyramids</button>
+            <button onclick="highlightLocation('Karnak Temple')">Karnak Temple</button>
+            <button onclick="highlightLocation('Abu Simbel Temple')">Abu Simbel</button>
+            <button onclick="highlightLocation('Egyptian Museum')">Egyptian Museum</button>
+            <button onclick="highlightLocation('High Dam')">High Dam</button>
+            <button onclick="highlightLocation('Qaitbay Citadel')">Qaitbay Citadel</button>
+            <button onclick="highlightLocation('Siwa Oasis')">Siwa Oasis</button>
+            <button onclick="highlightLocation('Cairo Tower')">Cairo Tower</button>
+            <button onclick="highlightLocation('Luxor Temple')">Luxor Temple</button>
+            <button onclick="highlightLocation('Mummification Museum')">Mummification Museum</button>
+            <button onclick="highlightLocation('Philae Temple')">Philae Temple</button>
+        </div>
+        </div>
+
+        <div class="map-image-container">
+        <img id="map-image" src="../Image/img1.jpg" alt="Ancient Egypt Map" />
+        
+        <div class="map-location" style="top: 15.5%; left: 33.1%;" title="Pyramids" onclick="openGPS(29.9792, 31.1342)"></div>
+        <div class="map-location" style="top: 58%; left: 64%;" title="Karnak Temple" onclick="openGPS(25.7188, 32.6573)"></div>
+        <div class="map-location" style="top: 81.6%; left: 45.3%;" title="Abu Simbel Temple" onclick="openGPS(22.3372, 31.6258)"></div>
+        <div class="map-location" style="top: 20%; left: 37%;" title="Egyptian Museum" onclick="openGPS(30.0478, 31.2336)"></div>
+        <div class="map-location" style="top: 80%; left: 70%;" title="High Dam" onclick="openGPS(23.9706, 32.8778)"></div>
+        <div class="map-location" style="top: 8%; left: 23%;" title="Qaitbay Citadel" onclick="openGPS(31.2135, 29.8856)"></div>
+        <div class="map-location" style="top: 27%; left: 5%;" title="Siwa Oasis" onclick="openGPS(29.2032, 25.5196)"></div>
+        <div class="map-location" style="top: 19%; left: 40%;" title="Cairo Tower" onclick="openGPS(30.0459, 31.2243)"></div>
+        <div class="map-location" style="top: 56%; left: 59%;" title="Luxor Temple" onclick="openGPS(25.6996, 32.6396)"></div>
+        <div class="map-location" style="top: 57%; left: 67%;" title="Mummification Museum" onclick="openGPS(25.7045, 32.6426)"></div>
+        <div class="map-location" style="top: 76%; left: 68%;" title="Philae Temple" onclick="openGPS(24.0258, 32.8846)"></div>
+        </div>
+    </div>
+
+    <a href="../HTML/Nav.html" class="map-exit-link">
+        <i class='bx bxs-home'></i>
+    </a>
+
+    <!-- End Map -->
+
+    <script src="../JS/Map.js"></script>
+</body>
+</html>

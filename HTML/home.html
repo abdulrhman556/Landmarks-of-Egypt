@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArchaeoExplore - Discover Ancient Worlds</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../CSS/styel.css">
+
+    <!-- Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <!-- Start Home Page -->
+    <div class="Home min-h-screen flex flex-col">
+        <div class="Home-Page">
+            <div class="max-w-7xl mx-auto text-center">
+                <h1 class="Home-title-font text-4xl md:text-6xl font-bold mb-6">Welcome to ArchaeoExplore</h1>
+                <p class="Home-text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Begin your journey through ancient civilizations
+                    and complete your archaeological expedition
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="../HTML/login.php" id="RegisterBtn" class="Home-btn-primary Home-btn-amber">
+                        <i class="fas fa-user-plus text-2xl mr-3"></i>
+                        <span class="Home-text-lg">Create Expedition Account</span>
+                    </a>
+                    <a href="../HTML/login.php" id="loginBtn" class="Home-btn-primary Home-btn-white">
+                        <i class="fas fa-sign-in-alt text-2xl mr-3"></i>
+                        <span class="Home-text-lg">Log In to Continue</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Section -->
+    <section class="video-section">
+        <video controls>
+        <source src="../Video/20250427_003828.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <h3>Discover the Magnificence of the Ancient Egyptian Civilization</h3>
+        <button onclick="window.location.href='../HTML/login.php'">Are you ready to register now?</button>
+    </section>
+
+
+        <section class="Home-features" id="Home-features">
+            <div class="Home-box-container">
+                <div class="Home-box">
+                    <div class="Home-image">
+                        <img src="../Image/Archaeological.jpg" alt="">
+                    </div>
+                    <div class="Home-content">
+                        <h3 class="Home-title">Giza Pyramids</h3>
+                        <p>Explore the wonders of the ancient pharaohs.</p>
+                    </div>
+                </div>
+        
+                <div class="Home-box">
+                    <div class="Home-image">
+                        <img src="../Image/Artifacts1.jpg" alt="">
+                    </div>
+                    <div class="Home-content">
+                        <h3 class="Home-title">Karnak Temple</h3>
+                        <p>Take a tour inside one of the world's greatest temples.</p>
+                    </div>
+                </div>
+        
+                <div class="Home-box">
+                    <div class="Home-image">
+                        <img src="../Image/Ancient1.jpg" alt="">
+                    </div>
+                    <div class="Home-content">
+                        <h3 class="Home-title">Civilization Museum</h3>
+                        <p>Discover treasures that tell Egypt's rich history.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="Home-footer mt-auto">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="title-font text-2xl font-bold Home-footer-title">Archaeo Explore</h2>
+                    <p class="text-amber-200">Preserving the past for the future</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="Home-social-icon"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="Home-social-icon"><i class="fab fa-facebook text-2xl"></i></a>
+                    <a href="#" class="Home-social-icon"><i class="fab fa-instagram text-2xl"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- End Home Page -->
+
+    <script src="../JS/main.js"></script>
+</body>
+
+</html>

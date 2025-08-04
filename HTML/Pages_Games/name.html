@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pharaoh Identity</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../CSS/Pages_Games.css">
+</head>
+<body id="name">
+
+  <div class="box" id="box">
+    <h1>Prepare to witness the magic of the Pharaohs</h1>
+
+    <input type="text" id="nameEn" placeholder="Enter your name in English"><br>
+    <button onclick="expandBox()">Enter</button>
+
+    <div class="result" id="result" style="display: none;">
+      <div class="hieroglyph" id="hieroName"></div>
+      <div id="job"></div>
+      <div class="fact" id="fact"></div>
+      <br>
+      <button onclick="location.reload()">Play Again</button>
+      <button onclick="window.location.href='name.html'">Return to Home</button>
+    </div>
+  </div>
+  <a href="../Games.html" class="Book-exit-link">
+    <i class="fas fa-arrow-left"></i>
+</a>
+  <script src="../../JS/pages_Games.js"></script>
+
+</body>
+</html>

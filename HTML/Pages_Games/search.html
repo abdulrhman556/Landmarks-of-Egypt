@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Points Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../CSS/Games.css">
+</head>
+<body>
+
+<div class="cover">
+  <div class="header-text">Explore the Secrets of Ancient Pharaohs' Treasures</div>
+  <div class="icon" style="top: 40%; left: 45%;" onclick="openPopup('../../Video/VivaCut_video_1745694911718.mp4', 'Pharaonic Temple')">💰⚱💰❓</div>
+  <div class="icon" style="top: 70%; left: 70%;" onclick="openPopup('../../Video/VivaCut_video_1745692658129_HD.mp4', 'Mummification.')">💰⚱💰❓</div>
+  <div class="icon" style="top: 85%; left: 10%;" onclick="openPopup('../../Video/VivaCut_video_1745694329055.mp4', 'Papyrus Scroll')">💰⚱💰❓</div>
+  <div class="icon" style="top: 30%; left: 80%;" onclick="openPopup('../../Video/VivaCut_video_1745697441354.mp4', 'The Sphinx')">💰⚱💰❓</div>
+  <div class="icon" style="top: 30%; left: 15%;" onclick="openPopup('../../Video/VivaCut_video_1745696394338_HD.mp4', ' Giza Pyramids')">💰⚱💰❓</div>
+</div>
+
+<div class="popup" id="popup">
+  <div class="close-btn" onclick="closePopup()">✖</div>
+  <div class="popup-container">
+    <video id="popupVideo" controls></video>
+    <button class="fullscreen-btn" onclick="goFullscreen()">Go Fullscreen</button>
+    <h2 id="videoTitle"></h2>
+  </div>
+</div>
+<a href="../Games.html" class="Book-exit-link">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<script src="../../JS/pages_Games.js">
+
+</script>
+
+</body>
+</html>

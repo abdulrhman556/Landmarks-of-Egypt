@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  .screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    padding: 20px;
+    transition: background 0.5s ease;
+  }
+  .active {
+    display: flex;
+  }
+  .btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .input-name {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    background: black;
+    color: gold;
+    border: 2px solid gold;
+    border-radius: 6px;
+  }
+  #congrats-img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+    position: relative;
+  }
+  #player-name {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #381800;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px gold;
+  }
+  #pharaoh-seal {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: auto;
+  }
+  h2 {
+    text-shadow: 0 0 8px gold, 0 0 20px #ffcc00;
+    font-size: 1.2rem;
+    margin-top: -50px;
+  }
+  p {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-top: -30px;
+    text-shadow: 0 0 8px gold, 0 0 20px #ffcc00;
+  }
+  .Book-exit-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: all 0.5s ease-in-out;
+    }
+
+.Book-exit-link:hover {
+    background: yellow;
+    color: black;
+    box-shadow: 0 0 20px #ffff00;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <!-- Linking Bootstrap Library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="../CSS/Booking.css">
+</head>
+
+<body class="booking-form">
+
+    <div class="container">
+        <h1>Pharaoh Tour Booking Form</h1>
+
+        <!-- Booking Form -->
+        <form action="../PHP/booking_form.php" method="POST">
+
+            <!-- Name, Email, Phone and Number of People -->
+            <div class="form-row">
+                <div class="col-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="col-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="col-6">
+                    <label for="people_count" class="form-label">Number of People</label>
+                    <input type="number" class="form-control" id="people_count" name="people_count" min="1" required>
+                </div>
+            </div>
+
+
+            <!-- Trip Name and Days -->
+            <div class="form-row">
+                <div class="col-6">
+                    <label for="trip_name" class="form-label">Trip Name</label>
+                    <input type="text" class="form-control" id="trip_name" name="trip_name"
+                        value="Pharaoh's Heritage Tour" readonly>
+                </div>
+                <div class="col-6">
+                    <label for="days" class="form-label">Number of Days</label>
+                    <input type="number" class="form-control" id="days" name="days" value="10" readonly>
+                </div>
+            </div>
+
+            <!-- Price and Transport -->
+            <div class="form-row">
+                <div class="col-6">
+                    <label for="price" class="form-label">Price ($)</label>
+                    <input type="text" class="form-control" id="price" name="price" value="2000" readonly>
+                </div>
+                <div class="col-6">
+                    <label for="transport" class="form-label">Transport Details</label>
+                    <input type="text" class="form-control" id="transport" name="transport"
+                        value="Air-conditioned bus & Domestic Flights" readonly>
+                </div>
+            </div>
+
+            <!-- Guide Language and Hotel Rating -->
+            <div class="form-row">
+                <div class="col-6">
+                    <label for="guide" class="form-label">Guide Language</label>
+                    <input type="text" class="form-control" id="guide" name="guide" value="English" readonly>
+                </div>
+                <div class="col-6">
+                    <label for="hotel" class="form-label">Hotel Rating</label>
+                    <input type="text" class="form-control" id="hotel" name="hotel" value="4★ & 4.5★" readonly>
+                </div>
+            </div>
+
+
+            <!-- Booking Date -->
+            <div class="form-group">
+                <label for="booking_date" class="form-label">Booking Date</label>
+                <input type="date" class="form-control" id="booking_date" name="booking_date" required>
+            </div>
+
+
+            <!-- Submit Button -->
+            <button name="submit" type="submit" class="btn btn-custom w-100">Proceed to Payment Page</button>
+        </form>
+
+        <!-- Price Alert if more than 1 person -->
+        <div class="alert mt-3" id="priceAlert" style="display:none;">
+            The price will increase by $100 for each additional person!
+        </div>
+    </div>
+
+    <a href="../HTML/Book.php" class="Book-exit-link">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+
+    <script src="../JS/Booking_Form.js"></script>
+
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
